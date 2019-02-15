@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libCompactNSearch.a  CMakeFiles/CompactNSearch.dir/src/CompactNSearch.cpp.o
+/usr/bin/ranlib ../../../lib/libCompactNSearch.a

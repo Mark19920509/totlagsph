@@ -1,0 +1,14 @@
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/install/local.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/install/strip.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/install.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/list_install_components.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/rebuild_cache.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/edit_cache.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/CMakeFiles/CompactNSearch.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/install/local.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/install/strip.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/install.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/Demo.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/list_install_components.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/rebuild_cache.dir
+/Users/chang/Desktop/ResearchCodes/FDMSPH/extern/CompactNSearch/build/demo/CMakeFiles/edit_cache.dir

@@ -1,0 +1,963 @@
+The system is: Darwin - 17.7.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/local/bin/gcc-7 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /usr/local/bin/g++-7 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+
+The CXX compiler identification is GNU, found in "/Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_edec9/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_edec9.dir/build.make CMakeFiles/cmTC_edec9.dir/build
+Building C object CMakeFiles/cmTC_edec9.dir/testCCompiler.c.o
+/usr/local/bin/gcc-7    -o CMakeFiles/cmTC_edec9.dir/testCCompiler.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_edec9
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_edec9.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_edec9.dir/testCCompiler.c.o  -o cmTC_edec9 
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8af8a/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8af8a.dir/build.make CMakeFiles/cmTC_8af8a.dir/build
+Building C object CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o
+/usr/local/bin/gcc-7    -o CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_8af8a
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8af8a.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o  -o cmTC_8af8a 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/gcc-7
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8af8a' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_8af8a -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v
+collect2 version 7.3.0
+/usr/bin/ld -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_8af8a -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+ /usr/bin/nm -n CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_8af8a/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_8af8a.dir/build.make CMakeFiles/cmTC_8af8a.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/local/bin/gcc-7    -o CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_8af8a]
+  ignore line: [/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8af8a.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o  -o cmTC_8af8a ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/gcc-7]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8af8a' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2']
+  link line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_8af8a -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v]
+    arg [/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.7] ==> ignore
+    arg [-weak_reference_mismatches] ==> ignore
+    arg [non-weak] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_8af8a] ==> ignore
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_8af8a.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-no_compact_unwind] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_ext.10.5] ==> lib [gcc_ext.10.5]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lSystem] ==> lib [System]
+    arg [-v] ==> ignore
+  Library search paths: [;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [System]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [gcc_ext.10.5;gcc]
+  implicit dirs: [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d4449/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_d4449.dir/build.make CMakeFiles/cmTC_d4449.dir/build
+Building C object CMakeFiles/cmTC_d4449.dir/feature_tests.c.o
+/usr/local/bin/gcc-7   -std=c11 -o CMakeFiles/cmTC_d4449.dir/feature_tests.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d4449
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4449.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d4449.dir/feature_tests.c.o  -o cmTC_d4449 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_40558/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_40558.dir/build.make CMakeFiles/cmTC_40558.dir/build
+Building C object CMakeFiles/cmTC_40558.dir/feature_tests.c.o
+/usr/local/bin/gcc-7   -std=c99 -o CMakeFiles/cmTC_40558.dir/feature_tests.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_40558
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_40558.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_40558.dir/feature_tests.c.o  -o cmTC_40558 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_58408/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_58408.dir/build.make CMakeFiles/cmTC_58408.dir/build
+Building C object CMakeFiles/cmTC_58408.dir/feature_tests.c.o
+/usr/local/bin/gcc-7   -std=c90 -o CMakeFiles/cmTC_58408.dir/feature_tests.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_58408
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_58408.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7   -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_58408.dir/feature_tests.c.o  -o cmTC_58408 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the CXX compiler works passed with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fbdaf/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_fbdaf.dir/build.make CMakeFiles/cmTC_fbdaf.dir/build
+Building CXX object CMakeFiles/cmTC_fbdaf.dir/testCXXCompiler.cxx.o
+/usr/local/bin/g++-7     -o CMakeFiles/cmTC_fbdaf.dir/testCXXCompiler.cxx.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_fbdaf
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fbdaf.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_fbdaf.dir/testCXXCompiler.cxx.o  -o cmTC_fbdaf 
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0763d/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0763d.dir/build.make CMakeFiles/cmTC_0763d.dir/build
+Building CXX object CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o
+/usr/local/bin/g++-7     -o CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_0763d
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0763d.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0763d 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/g++-7
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0763d' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_0763d -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v
+collect2 version 7.3.0
+/usr/bin/ld -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_0763d -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+ /usr/bin/nm -n CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_0763d/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_0763d.dir/build.make CMakeFiles/cmTC_0763d.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/local/bin/g++-7     -o CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.10.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_0763d]
+  ignore line: [/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0763d.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_0763d ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/g++-7]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0763d' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2']
+  link line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_0763d -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v]
+    arg [/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.7] ==> ignore
+    arg [-weak_reference_mismatches] ==> ignore
+    arg [non-weak] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_0763d] ==> ignore
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_0763d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-no_compact_unwind] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_ext.10.5] ==> lib [gcc_ext.10.5]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lSystem] ==> lib [System]
+    arg [-v] ==> ignore
+  Library search paths: [;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [System]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [stdc++;gcc_ext.10.5;gcc]
+  implicit dirs: [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting CXX [-std=c++1z] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_377b1/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_377b1.dir/build.make CMakeFiles/cmTC_377b1.dir/build
+Building CXX object CMakeFiles/cmTC_377b1.dir/feature_tests.cxx.o
+/usr/local/bin/g++-7    -std=c++1z -o CMakeFiles/cmTC_377b1.dir/feature_tests.cxx.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_377b1
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_377b1.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_377b1.dir/feature_tests.cxx.o  -o cmTC_377b1 
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++14] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_50882/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_50882.dir/build.make CMakeFiles/cmTC_50882.dir/build
+Building CXX object CMakeFiles/cmTC_50882.dir/feature_tests.cxx.o
+/usr/local/bin/g++-7    -std=c++14 -o CMakeFiles/cmTC_50882.dir/feature_tests.cxx.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_50882
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50882.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_50882.dir/feature_tests.cxx.o  -o cmTC_50882 
+
+
+    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++11] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6a7f9/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_6a7f9.dir/build.make CMakeFiles/cmTC_6a7f9.dir/build
+Building CXX object CMakeFiles/cmTC_6a7f9.dir/feature_tests.cxx.o
+/usr/local/bin/g++-7    -std=c++11 -o CMakeFiles/cmTC_6a7f9.dir/feature_tests.cxx.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6a7f9
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a7f9.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_6a7f9.dir/feature_tests.cxx.o  -o cmTC_6a7f9 
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+
+
+Detecting CXX [-std=c++98] compiler features compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cd389/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_cd389.dir/build.make CMakeFiles/cmTC_cd389.dir/build
+Building CXX object CMakeFiles/cmTC_cd389.dir/feature_tests.cxx.o
+/usr/local/bin/g++-7    -std=c++98 -o CMakeFiles/cmTC_cd389.dir/feature_tests.cxx.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_cd389
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd389.dir/link.txt --verbose=1
+/usr/local/bin/g++-7    -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_cd389.dir/feature_tests.cxx.o  -o cmTC_cd389 
+
+
+    Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
+    Feature record: CXX_FEATURE:0cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:0cxx_attributes
+    Feature record: CXX_FEATURE:0cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:0cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:0cxx_constexpr
+    Feature record: CXX_FEATURE:0cxx_contextual_conversions
+    Feature record: CXX_FEATURE:0cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:0cxx_decltype_incomplete_return_types
+    Feature record: CXX_FEATURE:0cxx_default_function_template_args
+    Feature record: CXX_FEATURE:0cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:0cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:0cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:0cxx_explicit_conversions
+    Feature record: CXX_FEATURE:0cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:0cxx_extern_templates
+    Feature record: CXX_FEATURE:0cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:0cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:0cxx_local_type_template_args
+    Feature record: CXX_FEATURE:0cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:0cxx_nullptr
+    Feature record: CXX_FEATURE:0cxx_override
+    Feature record: CXX_FEATURE:0cxx_range_for
+    Feature record: CXX_FEATURE:0cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_relaxed_constexpr
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:0cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:0cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:0cxx_static_assert
+    Feature record: CXX_FEATURE:0cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:0cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:0cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:0cxx_variable_templates
+    Feature record: CXX_FEATURE:0cxx_variadic_macros
+    Feature record: CXX_FEATURE:0cxx_variadic_templates
+Detecting C OpenMP compiler ABI info compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_810fe/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_810fe.dir/build.make CMakeFiles/cmTC_810fe.dir/build
+Building C object CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o
+/usr/local/bin/gcc-7   -fopenmp -v   -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/gcc-7
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/cc1 -quiet -v -D__DYNAMIC__ /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -fPIC -quiet -dumpbase OpenMPTryFlag.c -mmacosx-version-min=10.13.7 -mtune=core2 -auxbase-strip CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o -version -fopenmp -o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s
+GNU C11 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)
+	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../x86_64-apple-darwin17.3.0/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include
+ /usr/local/include
+ /usr/local/Cellar/gcc/7.3.0/include
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include-fixed
+ /usr/include
+ /System/Library/Frameworks
+ /Library/Frameworks
+End of search list.
+GNU C11 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)
+	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 0751f6cfecd1bc1a33db9cd5aece9463
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7'  '-mtune=core2'
+ as -arch x86_64 -v -force_cpusubtype_ALL -mmacosx-version-min=10.13 -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s
+Apple LLVM version 10.0.0 (clang-1000.10.44.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple x86_64-apple-macosx10.13.0 -filetype obj -main-file-name ccsZMVXC.s -target-cpu penryn -fdebug-compilation-dir /Users/chang_mac/Desktop/research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp -dwarf-debug-producer Apple LLVM version 10.0.0 (clang-1000.10.44.2) -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7'  '-mtune=core2'
+Linking C executable cmTC_810fe
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_810fe.dir/link.txt --verbose=1
+/usr/local/bin/gcc-7  -fopenmp -v -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o  -o cmTC_810fe -v -Wl,-v 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/gcc-7
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_810fe' '-v' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_810fe -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o -v -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v
+collect2 version 7.3.0
+/usr/bin/ld -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_810fe -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o -v -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+ /usr/bin/nm -n CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o
+
+
+Parsed C OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_810fe/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_810fe.dir/build.make CMakeFiles/cmTC_810fe.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o]
+  ignore line: [/usr/local/bin/gcc-7   -fopenmp -v   -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o   -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/gcc-7]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2']
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/cc1 -quiet -v -D__DYNAMIC__ /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -fPIC -quiet -dumpbase OpenMPTryFlag.c -mmacosx-version-min=10.13.7 -mtune=core2 -auxbase-strip CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o -version -fopenmp -o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s]
+  ignore line: [GNU C11 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)]
+  ignore line: [	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../x86_64-apple-darwin17.3.0/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/include]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [ /System/Library/Frameworks]
+  ignore line: [ /Library/Frameworks]
+  ignore line: [End of search list.]
+  ignore line: [GNU C11 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)]
+  ignore line: [	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: 0751f6cfecd1bc1a33db9cd5aece9463]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7'  '-mtune=core2']
+  ignore line: [ as -arch x86_64 -v -force_cpusubtype_ALL -mmacosx-version-min=10.13 -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s]
+  ignore line: [Apple LLVM version 10.0.0 (clang-1000.10.44.2)]
+  ignore line: [Target: x86_64-apple-darwin17.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple x86_64-apple-macosx10.13.0 -filetype obj -main-file-name ccsZMVXC.s -target-cpu penryn -fdebug-compilation-dir /Users/chang_mac/Desktop/research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp -dwarf-debug-producer Apple LLVM version 10.0.0 (clang-1000.10.44.2) -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//ccsZMVXC.s]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o' '-c' '-mmacosx-version-min=10.13.7'  '-mtune=core2']
+  ignore line: [Linking C executable cmTC_810fe]
+  ignore line: [/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_810fe.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/gcc-7  -fopenmp -v -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o  -o cmTC_810fe -v -Wl,-v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/gcc-7]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_810fe' '-v' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-mtune=core2']
+  link line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_810fe -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o -v -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v]
+    arg [/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.7] ==> ignore
+    arg [-weak_reference_mismatches] ==> ignore
+    arg [non-weak] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_810fe] ==> ignore
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [CMakeFiles/cmTC_810fe.dir/OpenMPTryFlag.c.o] ==> ignore
+    arg [-v] ==> ignore
+    arg [-lgomp] ==> lib [gomp]
+    arg [-no_compact_unwind] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_ext.10.5] ==> lib [gcc_ext.10.5]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lSystem] ==> lib [System]
+    arg [-v] ==> ignore
+    arg [-v] ==> ignore
+  Library search paths: [;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [System]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [gomp;gcc_ext.10.5;gcc]
+  implicit dirs: [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+Detecting CXX OpenMP compiler ABI info compiled with the following output:
+Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_22d0e/fast"
+/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_22d0e.dir/build.make CMakeFiles/cmTC_22d0e.dir/build
+Building CXX object CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o
+/usr/local/bin/g++-7    -fopenmp -v   -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/g++-7
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/cc1plus -quiet -v -D__DYNAMIC__ /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -fPIC -quiet -dumpbase OpenMPTryFlag.cpp -mmacosx-version-min=10.13.7 -mtune=core2 -auxbase-strip CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s
+GNU C++14 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)
+	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring nonexistent directory "/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../x86_64-apple-darwin17.3.0/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0/x86_64-apple-darwin17.3.0
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0/backward
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include
+ /usr/local/include
+ /usr/local/Cellar/gcc/7.3.0/include
+ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include-fixed
+ /usr/include
+ /System/Library/Frameworks
+ /Library/Frameworks
+End of search list.
+GNU C++14 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)
+	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP
+
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: e842f18ce880f3211760ed17476e01db
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7'  '-shared-libgcc' '-mtune=core2'
+ as -arch x86_64 -v -force_cpusubtype_ALL -mmacosx-version-min=10.13 -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s
+Apple LLVM version 10.0.0 (clang-1000.10.44.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple x86_64-apple-macosx10.13.0 -filetype obj -main-file-name cc3H3Fxo.s -target-cpu penryn -fdebug-compilation-dir /Users/chang_mac/Desktop/research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp -dwarf-debug-producer Apple LLVM version 10.0.0 (clang-1000.10.44.2) -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7'  '-shared-libgcc' '-mtune=core2'
+Linking CXX executable cmTC_22d0e
+/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22d0e.dir/link.txt --verbose=1
+/usr/local/bin/g++-7   -fopenmp -v -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o  -o cmTC_22d0e -v -Wl,-v 
+Using built-in specs.
+COLLECT_GCC=/usr/local/bin/g++-7
+COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper
+Target: x86_64-apple-darwin17.3.0
+Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls
+Thread model: posix
+gcc version 7.3.0 (Homebrew GCC 7.3.0) 
+COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/
+LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_22d0e' '-v' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2'
+ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_22d0e -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -v -lstdc++ -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v
+collect2 version 7.3.0
+/usr/bin/ld -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_22d0e -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -v -lstdc++ -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+@(#)PROGRAM:ld  PROJECT:ld64-409.12
+BUILD 02:04:28 Aug 14 2018
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
+Library search paths:
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0
+	/usr/local/Cellar/gcc/7.3.0/lib/gcc/7
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+ /usr/bin/nm -n CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o
+
+
+Parsed CXX OpenMP implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_22d0e/fast"]
+  ignore line: [/Library/Developer/CommandLineTools/usr/bin/make -f CMakeFiles/cmTC_22d0e.dir/build.make CMakeFiles/cmTC_22d0e.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/usr/local/bin/g++-7    -fopenmp -v   -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -c /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/g++-7]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2']
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/cc1plus -quiet -v -D__DYNAMIC__ /Users/chang_mac/Desktop/Research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -fPIC -quiet -dumpbase OpenMPTryFlag.cpp -mmacosx-version-min=10.13.7 -mtune=core2 -auxbase-strip CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s]
+  ignore line: [GNU C++14 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)]
+  ignore line: [	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [ignoring nonexistent directory "/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../x86_64-apple-darwin17.3.0/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0/x86_64-apple-darwin17.3.0]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../../../../include/c++/7.3.0/backward]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include]
+  ignore line: [ /usr/local/include]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/include]
+  ignore line: [ /usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/include-fixed]
+  ignore line: [ /usr/include]
+  ignore line: [ /System/Library/Frameworks]
+  ignore line: [ /Library/Frameworks]
+  ignore line: [End of search list.]
+  ignore line: [GNU C++14 (Homebrew GCC 7.3.0) version 7.3.0 (x86_64-apple-darwin17.3.0)]
+  ignore line: [	compiled by GNU C version 7.3.0, GMP version 6.1.2, MPFR version 4.0.0, MPC version 1.1.0, isl version isl-0.18-GMP]
+  ignore line: []
+  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+  ignore line: [Compiler executable checksum: e842f18ce880f3211760ed17476e01db]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7'  '-shared-libgcc' '-mtune=core2']
+  ignore line: [ as -arch x86_64 -v -force_cpusubtype_ALL -mmacosx-version-min=10.13 -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s]
+  ignore line: [Apple LLVM version 10.0.0 (clang-1000.10.44.2)]
+  ignore line: [Target: x86_64-apple-darwin17.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Library/Developer/CommandLineTools/usr/bin]
+  ignore line: [ "/Library/Developer/CommandLineTools/usr/bin/clang" -cc1as -triple x86_64-apple-macosx10.13.0 -filetype obj -main-file-name cc3H3Fxo.s -target-cpu penryn -fdebug-compilation-dir /Users/chang_mac/Desktop/research/solidmechanics/FDMSPH-ghostparticlebranch/build/CMakeFiles/CMakeTmp -dwarf-debug-producer Apple LLVM version 10.0.0 (clang-1000.10.44.2) -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o /var/folders/1c/fcd_jvtj4_l65j4gx_d70d8c0000gn/T//cc3H3Fxo.s]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o' '-c' '-mmacosx-version-min=10.13.7'  '-shared-libgcc' '-mtune=core2']
+  ignore line: [Linking CXX executable cmTC_22d0e]
+  ignore line: [/usr/local/Cellar/cmake/3.10.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22d0e.dir/link.txt --verbose=1]
+  ignore line: [/usr/local/bin/g++-7   -fopenmp -v -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o  -o cmTC_22d0e -v -Wl,-v ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/local/bin/g++-7]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/lto-wrapper]
+  ignore line: [Target: x86_64-apple-darwin17.3.0]
+  ignore line: [Configured with: ../configure --build=x86_64-apple-darwin17.3.0 --prefix=/usr/local/Cellar/gcc/7.3.0 --libdir=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7 --enable-languages=c,c++,objc,obj-c++,fortran --program-suffix=-7 --with-gmp=/usr/local/opt/gmp --with-mpfr=/usr/local/opt/mpfr --with-mpc=/usr/local/opt/libmpc --with-isl=/usr/local/opt/isl --with-system-zlib --enable-checking=release --with-pkgversion='Homebrew GCC 7.3.0' --with-bugurl=https://github.com/Homebrew/homebrew-core/issues --disable-nls]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Homebrew GCC 7.3.0) ]
+  ignore line: [COMPILER_PATH=/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/]
+  ignore line: [LIBRARY_PATH=/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/:/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../../]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_22d0e' '-v' '-mmacosx-version-min=10.13.7' '-asm_macosx_version_min=10.13' '-shared-libgcc' '-mtune=core2']
+  link line: [ /usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2 -dynamic -arch x86_64 -macosx_version_min 10.13.7 -weak_reference_mismatches non-weak -o cmTC_22d0e -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0 -L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../.. -search_paths_first -headerpad_max_install_names CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o -v -lstdc++ -lgomp -no_compact_unwind -lSystem -lgcc_ext.10.5 -lgcc -lSystem -v -v]
+    arg [/usr/local/Cellar/gcc/7.3.0/libexec/gcc/x86_64-apple-darwin17.3.0/7.3.0/collect2] ==> ignore
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.13.7] ==> ignore
+    arg [-weak_reference_mismatches] ==> ignore
+    arg [non-weak] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_22d0e] ==> ignore
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+    arg [-L/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [CMakeFiles/cmTC_22d0e.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [-v] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lgomp] ==> lib [gomp]
+    arg [-no_compact_unwind] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [-lgcc_ext.10.5] ==> lib [gcc_ext.10.5]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lSystem] ==> lib [System]
+    arg [-v] ==> ignore
+    arg [-v] ==> ignore
+  Library search paths: [;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [System]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0/../../..] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0]
+  collapse library dir [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7] ==> [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: [stdc++;gomp;gcc_ext.10.5;gcc]
+  implicit dirs: [/usr/local/Cellar/gcc/7.3.0/lib/gcc/7/gcc/x86_64-apple-darwin17.3.0/7.3.0;/usr/local/Cellar/gcc/7.3.0/lib/gcc/7;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+

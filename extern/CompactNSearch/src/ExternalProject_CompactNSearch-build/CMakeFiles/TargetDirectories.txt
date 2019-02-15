@@ -1,0 +1,14 @@
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/install/local.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/install/strip.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/install.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/list_install_components.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/rebuild_cache.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/edit_cache.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/CMakeFiles/CompactNSearch.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/install/local.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/install/strip.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/install.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/Demo.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/list_install_components.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/rebuild_cache.dir
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch-build/demo/CMakeFiles/edit_cache.dir

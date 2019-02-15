@@ -1,0 +1,55 @@
+{
+  "operation" : "SPHSimulation",
+  "1operation" : "GeometryGeneration",
+
+  "geometry_" : {"type" : "sphere",
+    "dropletRadius" : 1.45E-3,
+    "dropletCenter" : [0.0,0.0,1.50E-3],
+    "geomOutputFile" : "../inputs/nassiri_droplet.h5part",
+    "numParticles" : 200000
+  },
+
+	"geometry_2" : {"type" : "box",
+		"start" : [0,0,0],
+		"end" : [1.0,1.0,0.03],
+		"numParticles" : 2500,
+		"geomOutputFile" : "../inputs/randomBox2D.h5part"
+	},
+
+  "outputFile" : "thermal_expansion_no_creep",
+  "dimensions" : 2,
+  "dx" : 0.025,
+  "smoothingLength" : 0.075,
+  "ghostTol" : 0.85,
+  "ghostTrimTol" : 1.3,
+  "smearing_S" : 0.1,
+  "useVariableVolume" : "No",
+  "IIFCoeff" : 0.0,
+  "EOS" : "Linear",
+  "diffusionModel" : "DeltaSPH",
+  "kernelType" : "Wendland6",
+  "computeElasticity" : "Yes",
+  "viscosityConstantFormulation" : "Fixed",
+  "heatEqDiscretization" : "Consistent",
+  "thermalConductivity" : "Constant",
+  "temperatureEnthalpyRelation" : "T=H",
+  "viscosityFormulation" : "Shao",
+  "pressureFormulation" : 3,
+  "bodyForce" : "Gravity",
+  "Cl" : 1.0,
+  "Cq" : 0.75,
+  "damping" : 100.0,
+  "alpha" : 0.1,
+  "delta" : 0.2,
+  "dt" : 0.00025,
+  "outputStart" : 0,
+  "steps" : 200,
+  "outper" : 10,
+  "newfileper" : 5000,
+  "fixedPointIterations" : 2,
+  "inletActive" : 0, 
+  "sensors" : [
+    {"type" : "sensorZPlane",
+     "coord" : 0.0}
+  ]
+}

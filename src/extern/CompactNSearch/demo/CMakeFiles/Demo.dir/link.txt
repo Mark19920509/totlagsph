@@ -1,0 +1,1 @@
+/usr/local/bin/g++-7   -I /usr/local/hdf5/include ../eigen -L/usr/local/hdf5/lib -lH5Part -lhdf5 -fopenmp -fopenmp -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/Demo.dir/main.cpp.o  -o ../../../../bin/Demo  ../../../../lib/libCompactNSearch.a 

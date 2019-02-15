@@ -1,0 +1,53 @@
+{
+	"type" : "Fluid",
+	"rho0_" : 1000.0,
+	"rho0" : 1000.0,
+	"T0" : 0,
+	"mu" : 0.2,
+	"lambda" : 0.1,
+	"eta": 0.2, 
+
+	"FirstLame" : 50000.0,
+	"shearModulus" : 25000.0,
+	"M":"100000.0",
+	"Youngs":"66666.66666",
+	"Poisson":"0.3333333",
+	"beta":"200000.0 * Alpha",
+	"A":"100000 + beta * beta * T0 / (1000 * c)",
+
+	"soundSpeed" : 10.0,
+	"specificHeat_" : 1000.0,
+	"specificHeat" : 1.0,
+	"surfaceTensionCoeff" : 0.059,
+	"thermalConductivity_" : 1.0,
+	"thermalConductivity" : 1000.0,
+	"thermalExpansion" : 0.0005,
+	"v0"   : [0,0,-3.62],
+
+	"geometry" : {"type" : "block",
+					"begin" : [0.0,0.0,0.0],
+					"end" : [1.000001,0.25,0.0],
+					"includeBoundary" : "True",
+					"thermalDirichlet": [1.0, -9999],
+					"tempBound" : 10.0},					
+
+	"geometry_" : {
+		"type" : "pointCloud",
+		"file1" : "../inputs/droplet_dx_0.00005.h5part",		
+		"file" : "../inputs/randomBox2D.h5part" 
+	},
+
+	"geometry1" : {"type" : "sphere",
+		"dropletRadius" : 0.00005,
+		"dropletCenter" : [0.0,0.0,0.000055],
+		"geomOutputFile" : "../inputs/henning_3d_transient_103.h5part"
+	},
+	"inlet" : {
+		"dimensions" : 2,
+		"center" : [0,1.0],
+		"width" : 1.0,
+		"normal" : [0,-1.0],
+		"tangent" : [1.0,0],
+		"vel" : 1.0
+	}
+}

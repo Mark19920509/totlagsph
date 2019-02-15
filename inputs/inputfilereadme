@@ -1,0 +1,124 @@
+*** Setting the dimensions ***
+
+For "SPHSimulation" operations, The dimensions must be set before you execute the program. 2D and 3D is available : 
+
+	"dimensions" : (2 or 3)
+
+*** Setting the Kernel function ***
+
+The default is the wendland kernel. Depending on the "dimensions" option, the kernel will adjust accordingly.
+
+	"kernelType" : "Wendland_2h",
+
+*** Configuring the initial geometry ***
+
+To generate initial fluid geometries set the operation to "GeometryGeneration".
+
+	"operation" : "GeometryGeneration",
+
+Here are some examples. Random sphere uses a poisson sampler, which not might be ideal in some cases. 
+	"geometry" : {"type" : "sphere",
+					"dropletRadius" : 0.00005,
+					"dropletCenter" : [0.0,0.0,0.000055],
+					"geomOutputFile" : "../inputs/henning_3d_transient_103.h5part"
+	},
+
+	"geometry" : {"type" : "cylinder",
+					"origin" : [0,0,0],
+					"length" : 50.0E-6,
+					"radius" : 2.5E-6,
+					"numParticles" : 1757,
+					"geomOutputFile" : "../inputs/henning_3d_cylinder_1647.h5part"
+	},
+
+	"geometry" : {"type" : "box",
+		"start" : [0,0,0],
+		"end" : [50.0E-6,5.0E-6,5.0E-6],
+		"numParticles" : 50,
+		"geomOutputFile" : "../inputs/1D_102.h5part"
+	},
+
+	"geometry" : {
+		"type" : "uniform_cylinder",
+		"origin" : [0,0,0],
+		"length" : 50.0E-6,
+		"radius" : 2.5E-6,
+		"nr1" : 1,
+		"nd1" : 15,
+		"nr" : 1,
+		"nd" : 15,
+		"geomOutputFile" : "../inputs/3D_100.h5part"
+	},
+
+	"geometry" : {"type" : "line",
+		"start" : [0,0,0],
+		"end" : [50.0E-6,5.0E-6,5.0E-6],
+		"numParticles" : 50,
+		"geomOutputFile" : "../inputs/1D_102.h5part"
+	},
+
+
+
+
+To read from a pre-defined point-cloud, set the operation to "SPHSimulation".
+
+	"operation" : "SPHSimulation",
+
+In the fluid input file, set the geometry type to "pointCloud", and assign the location of the file:
+
+-- fluid.json
+	"geometry" : {
+			"type" : "pointCloud",
+			"file" : "../inputs/foo.h5part" 
+			}
+
+To create a block of fluid without a pre-defined point-cloud, in the fluid input file, set the type to "block", along with the parameters : 
+
+    "geometry" : {"type" : "block",
+    			  "begin" : [0.0,0.0,0.0],
+    			  "end" : [0.2,0.0,0.2],
+    			  "includeBoundary" : "True"}
+
+The include boundary option defines on whether you want to include the most outer layer of particles.
+
+
+
+"Frame" Boundary Example : 
+		{"type" : "frame", 
+		 "includeBoundary" : "False",
+		 "begin" : [-0.5,0,0], 
+		 "end" : [0,0,1],
+		 "thickness" : 3,
+		 "rho0" : 1000,
+		 "T0" : 100.0},
+
+"Block" Boundary Example : 
+		{"type" : "Block", 
+		 "includeBoundary" : "False",
+		 "begin" : [-0.5,0,0], 
+		 "end" : [0,0,1],
+		 "rho0" : 1000,
+		 "T0" : 100.0},
+
+"Block" Fluid Example : 
+
+    "fluidBox" : {"begin" : [0.075,0.0,0.075],
+    			  "end" : [0.5,0.0,0.5],
+    			  "includeBoundary" : "True"}
+
+
+		{"type" : "block", 
+		 "includeBoundary" : "True",
+		 "begin" : [-0.5,0,0], 
+		 "end" : [0,0,1],
+		 "thickness" : 3,
+		 "rho0" : 1,
+		 "T0" : 1.0},
+
+		 {"type" : "block", 
+		 "includeBoundary" : "False",
+		 "begin" : [1.0,0,-0.1], 
+		 "end" : [1.25,0,1.1],
+		 "thickness" : 3,
+		 "rho0" : 1,
+		 "T0" : 0.0}

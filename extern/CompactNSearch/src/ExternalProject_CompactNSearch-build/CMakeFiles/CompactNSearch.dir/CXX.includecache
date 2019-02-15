@@ -1,0 +1,100 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton.h
+morton2D.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton2D.h
+morton3D.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton3D.h
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton2D.h
+stdint.h
+-
+math.h
+-
+morton2D_LUTs.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton2D_LUTs.h
+morton_common.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton_common.h
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton2D_LUTs.h
+stdint.h
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton3D.h
+stdint.h
+-
+math.h
+-
+morton3D_LUTs.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton3D_LUTs.h
+morton_common.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton_common.h
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton3D_LUTs.h
+stdint.h
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton_common.h
+stdint.h
+-
+intrin.h
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/CompactNSearch
+CompactNSearch.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/CompactNSearch.h
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/CompactNSearch.h
+Config.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/Config.h
+DataStructures.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/DataStructures.h
+PointSet.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/PointSet.h
+unordered_map
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/Config.h
+ppl.h
+-
+parallel/algorithm
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/DataStructures.h
+Config.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/Config.h
+atomic
+-
+vector
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/include/PointSet.h
+Config.h
+-
+iostream
+-
+
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/src/CompactNSearch.cpp
+CompactNSearch
+-
+../extern/libmorton/libmorton/include/morton.h
+/Users/SJCY/Library/Mobile Documents/com~apple~CloudDocs/Research/FDMSPH/extern/CompactNSearch/src/ExternalProject_CompactNSearch/extern/libmorton/libmorton/include/morton.h
+iostream
+-
+numeric
+-
+array
+-
+cstdint
+-
+limits
+-
+algorithm
+-
+
