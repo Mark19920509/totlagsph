@@ -244,65 +244,65 @@ public:
 		H5PartWriteDataFloat64(fileWriter,"yo",&yo[0]);
 		H5PartWriteDataFloat64(fileWriter,"zo",&zo[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"L1_cond",&cond[0]);
+		// H5PartWriteDataFloat64(fileWriter,"L1_cond",&cond[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"ax",&ax[0]);
-		H5PartWriteDataFloat64(fileWriter,"ay",&ay[0]);
-		H5PartWriteDataFloat64(fileWriter,"az",&az[0]);
+		// H5PartWriteDataFloat64(fileWriter,"ax",&ax[0]);
+		// H5PartWriteDataFloat64(fileWriter,"ay",&ay[0]);
+		// H5PartWriteDataFloat64(fileWriter,"az",&az[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"rx",&rx[0]);
-		H5PartWriteDataFloat64(fileWriter,"ry",&ry[0]);
-		H5PartWriteDataFloat64(fileWriter,"rz",&rz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"rx",&rx[0]);
+		// H5PartWriteDataFloat64(fileWriter,"ry",&ry[0]);
+		// H5PartWriteDataFloat64(fileWriter,"rz",&rz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"px",&px[0]);
-		H5PartWriteDataFloat64(fileWriter,"py",&py[0]);
-		H5PartWriteDataFloat64(fileWriter,"pz",&pz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"px",&px[0]);
+		// H5PartWriteDataFloat64(fileWriter,"py",&py[0]);
+		// H5PartWriteDataFloat64(fileWriter,"pz",&pz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"vx",&vx[0]);
-		H5PartWriteDataFloat64(fileWriter,"vy",&vy[0]);
-		H5PartWriteDataFloat64(fileWriter,"vz",&vz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"vx",&vx[0]);
+		// H5PartWriteDataFloat64(fileWriter,"vy",&vy[0]);
+		// H5PartWriteDataFloat64(fileWriter,"vz",&vz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"fxx",&fxx[0]); H5PartWriteDataFloat64(fileWriter,"fxy",&fxy[0]); H5PartWriteDataFloat64(fileWriter,"fxz",&fxz[0]);
-		H5PartWriteDataFloat64(fileWriter,"fyx",&fyx[0]); H5PartWriteDataFloat64(fileWriter,"fyy",&fyy[0]); H5PartWriteDataFloat64(fileWriter,"fyz",&fyz[0]);
-		H5PartWriteDataFloat64(fileWriter,"fzx",&fzx[0]); H5PartWriteDataFloat64(fileWriter,"fzy",&fzy[0]); H5PartWriteDataFloat64(fileWriter,"fzz",&fzz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fxx",&fxx[0]); H5PartWriteDataFloat64(fileWriter,"fxy",&fxy[0]); H5PartWriteDataFloat64(fileWriter,"fxz",&fxz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fyx",&fyx[0]); H5PartWriteDataFloat64(fileWriter,"fyy",&fyy[0]); H5PartWriteDataFloat64(fileWriter,"fyz",&fyz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fzx",&fzx[0]); H5PartWriteDataFloat64(fileWriter,"fzy",&fzy[0]); H5PartWriteDataFloat64(fileWriter,"fzz",&fzz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"sxx",&sxx[0]); H5PartWriteDataFloat64(fileWriter,"sxy",&sxy[0]); H5PartWriteDataFloat64(fileWriter,"sxz",&sxz[0]);
-		H5PartWriteDataFloat64(fileWriter,"syx",&syx[0]); H5PartWriteDataFloat64(fileWriter,"syy",&syy[0]); H5PartWriteDataFloat64(fileWriter,"syz",&syz[0]);
-		H5PartWriteDataFloat64(fileWriter,"szx",&szx[0]); H5PartWriteDataFloat64(fileWriter,"szy",&szy[0]); H5PartWriteDataFloat64(fileWriter,"szz",&szz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"sxx",&sxx[0]); H5PartWriteDataFloat64(fileWriter,"sxy",&sxy[0]); H5PartWriteDataFloat64(fileWriter,"sxz",&sxz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"syx",&syx[0]); H5PartWriteDataFloat64(fileWriter,"syy",&syy[0]); H5PartWriteDataFloat64(fileWriter,"syz",&syz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"szx",&szx[0]); H5PartWriteDataFloat64(fileWriter,"szy",&szy[0]); H5PartWriteDataFloat64(fileWriter,"szz",&szz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"e1x",&e1x[0]); H5PartWriteDataFloat64(fileWriter,"e1y",&e1y[0]); H5PartWriteDataFloat64(fileWriter,"e1z",&e1z[0]);
-		H5PartWriteDataFloat64(fileWriter,"e2x",&e2x[0]); H5PartWriteDataFloat64(fileWriter,"e2y",&e2y[0]); H5PartWriteDataFloat64(fileWriter,"e2z",&e2z[0]);
-		H5PartWriteDataFloat64(fileWriter,"e3x",&e3x[0]); H5PartWriteDataFloat64(fileWriter,"e3y",&e3y[0]); H5PartWriteDataFloat64(fileWriter,"e3z",&e3z[0]);
+		// H5PartWriteDataFloat64(fileWriter,"e1x",&e1x[0]); H5PartWriteDataFloat64(fileWriter,"e1y",&e1y[0]); H5PartWriteDataFloat64(fileWriter,"e1z",&e1z[0]);
+		// H5PartWriteDataFloat64(fileWriter,"e2x",&e2x[0]); H5PartWriteDataFloat64(fileWriter,"e2y",&e2y[0]); H5PartWriteDataFloat64(fileWriter,"e2z",&e2z[0]);
+		// H5PartWriteDataFloat64(fileWriter,"e3x",&e3x[0]); H5PartWriteDataFloat64(fileWriter,"e3y",&e3y[0]); H5PartWriteDataFloat64(fileWriter,"e3z",&e3z[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"lambdax",&lambdax[0]); H5PartWriteDataFloat64(fileWriter,"lambday",&lambday[0]); H5PartWriteDataFloat64(fileWriter,"lambdaz",&lambdaz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"lambdax",&lambdax[0]); H5PartWriteDataFloat64(fileWriter,"lambday",&lambday[0]); H5PartWriteDataFloat64(fileWriter,"lambdaz",&lambdaz[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"nx",&nx[0]);
-		H5PartWriteDataFloat64(fileWriter,"ny",&ny[0]);
-		H5PartWriteDataFloat64(fileWriter,"nz",&nz[0]);
-		H5PartWriteDataFloat64(fileWriter,"tgx",&tgx[0]);
-		H5PartWriteDataFloat64(fileWriter,"tgy",&tgy[0]);
-		H5PartWriteDataFloat64(fileWriter,"tgz",&tgz[0]);
-		H5PartWriteDataFloat64(fileWriter,"hdot",&hdot[0]);
-		H5PartWriteDataFloat64(fileWriter,"freeSurface",&isFS[0]);
-		H5PartWriteDataFloat64(fileWriter,"boundary",&isBoundary[0]);
+		// H5PartWriteDataFloat64(fileWriter,"nx",&nx[0]);
+		// H5PartWriteDataFloat64(fileWriter,"ny",&ny[0]);
+		// H5PartWriteDataFloat64(fileWriter,"nz",&nz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"tgx",&tgx[0]);
+		// H5PartWriteDataFloat64(fileWriter,"tgy",&tgy[0]);
+		// H5PartWriteDataFloat64(fileWriter,"tgz",&tgz[0]);
+		// H5PartWriteDataFloat64(fileWriter,"hdot",&hdot[0]);
+		// H5PartWriteDataFloat64(fileWriter,"freeSurface",&isFS[0]);
+		// H5PartWriteDataFloat64(fileWriter,"boundary",&isBoundary[0]);
 		H5PartWriteDataFloat64(fileWriter,"ghost",&isGhost[0]);
-		H5PartWriteDataFloat64(fileWriter,"active",&isActive[0]);
-		H5PartWriteDataFloat64(fileWriter,"thermalDirichlet",&isThermalDirichlet[0]);
-		H5PartWriteDataFloat64(fileWriter,"curvature",&curvature[0]);
+		// H5PartWriteDataFloat64(fileWriter,"active",&isActive[0]);
+		// H5PartWriteDataFloat64(fileWriter,"thermalDirichlet",&isThermalDirichlet[0]);
+		// H5PartWriteDataFloat64(fileWriter,"curvature",&curvature[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"dens",&dens[0]);
-		H5PartWriteDataFloat64(fileWriter,"densityDot",&densDot[0]);
-		H5PartWriteDataFloat64(fileWriter,"mass",&mass[0]);
-		H5PartWriteDataFloat64(fileWriter,"vol",&vol[0]);
+		// H5PartWriteDataFloat64(fileWriter,"dens",&dens[0]);
+		// H5PartWriteDataFloat64(fileWriter,"densityDot",&densDot[0]);
+		// H5PartWriteDataFloat64(fileWriter,"mass",&mass[0]);
+		// H5PartWriteDataFloat64(fileWriter,"vol",&vol[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"particleDensity",&particleDensity[0]);
+		// H5PartWriteDataFloat64(fileWriter,"particleDensity",&particleDensity[0]);
 
-		H5PartWriteDataFloat64(fileWriter,"h",&h[0]);
+		// H5PartWriteDataFloat64(fileWriter,"h",&h[0]);
 		H5PartWriteDataFloat64(fileWriter,"temp",&temp[0]);
-		H5PartWriteDataFloat64(fileWriter,"heatSensed",&heatSensed[0]);
-		H5PartWriteDataFloat64(fileWriter,"fxSensed",&fxSensed[0]);
-		H5PartWriteDataFloat64(fileWriter,"fySensed",&fySensed[0]);
-		H5PartWriteDataFloat64(fileWriter,"fzSensed",&fzSensed[0]);
+		// H5PartWriteDataFloat64(fileWriter,"heatSensed",&heatSensed[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fxSensed",&fxSensed[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fySensed",&fySensed[0]);
+		// H5PartWriteDataFloat64(fileWriter,"fzSensed",&fzSensed[0]);
 
 		std::cout << "Done." << std::endl;
 		timeStep ++;

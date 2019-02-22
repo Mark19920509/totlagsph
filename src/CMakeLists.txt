@@ -28,8 +28,8 @@ target_link_libraries(FDMSPH "${HDF5_LIBRARY}")
 find_package(H5Part REQUIRED)
 include_directories ( "${H5PART_INCLUDE_PATH}" )
 target_link_libraries(FDMSPH "${H5PART_LIBRARIES}" "-I/usr/local/hdf5/include -L/usr/local/hdf5/lib -lH5Part -lhdf5")
+
 if(H5PART_LIBRARIES)
 	message("Found H5Part at ${H5PART_INCLUDE_PATH}")
 endif()
-
 

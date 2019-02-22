@@ -7,29 +7,29 @@ SPHSolver::SPHSolver(json& _simData, std::map<std::string,ParticleAttributes*>& 
 {
 
 	// Generate Particle Atrribution Arrays for the fluid
-	nsearch = new NeighborhoodSearch((double)simData["smoothingLength"]*1.1,true);
+	// nsearch = new NeighborhoodSearch((double)simData["smoothingLength"]*1.1,true);
 	// load the particlesets onto the nsearcher
 
 	std::cout << " ***** Initializing SPH Solver *****" << std::endl;
 	currentTime = 0.0;
 
 	for (const auto& pDatEntry : pData){
-		ids[pDatEntry.first] = nsearch->add_point_set( pDatEntry.second->pos.front().data(), pDatEntry.second->pos.size(), true, true);
-		std::cout << "... Particle set \"" << pDatEntry.first << "\" with " << pDatEntry.second->numParticles << " Particles Set Loaded onto CompactNSearch." << std::endl;
-		if (pDatEntry.second->pos.size() != pDatEntry.second->numParticles)	assert(!(pDatEntry.second->pos.size() == pDatEntry.second->numParticles));
+		// ids[pDatEntry.first] = nsearch->add_point_set( pDatEntry.second->pos.front().data(), pDatEntry.second->pos.size(), true, true);
+		// std::cout << "... Particle set \"" << pDatEntry.first << "\" with " << pDatEntry.second->numParticles << " Particles Set Loaded onto CompactNSearch." << std::endl;
+		// if (pDatEntry.second->pos.size() != pDatEntry.second->numParticles)	assert(!(pDatEntry.second->pos.size() == pDatEntry.second->numParticles));
 		setNames.push_back(pDatEntry.first);
 	}
 
 
-	totParticles = 0;
-	Uint numSets = 0;
+	// totParticles = 0;
+	// Uint numSets = 0;
 
-	for (const auto& pSet : nsearch->point_sets()){
-		totParticles += pSet.n_points();
-		numSets += 1;
-	}
+	// for (const auto& pSet : nsearch->point_sets()){
+		// totParticles += pSet.n_points();
+		// numSets += 1;
+	// }
 
-	std::cout << "... Loaded " << totParticles << " particles, with " << numSets << " point sets." << std::endl;
+	// std::cout << "... Loaded " << totParticles << " particles, with " << numSets << " point sets." << std::endl;
 
 	// Set the SPH model.
 	std::cout << "... defining models for SPH" << std::endl;
@@ -46,17 +46,17 @@ SPHSolver::SPHSolver(json& _simData, std::map<std::string,ParticleAttributes*>& 
 	setTemperatureEnthalpyRelation();
 
 	//Set the sensor particles.
-	setSensorParticles();
+	// setSensorParticles();
 
 	// Initialize the mass / volume
 	// neighborSearch();
-	reloadAndNeighborSearch();
-	setInitialConfigurationNeighbors();
+	// reloadAndNeighborSearch();
+	// setInitialConfigurationNeighbors();
 	if( simData["useVariableVolume"] == "Yes" ) initializeMass();
 
 
-	std::cout << "--- total number of particle sets : " << nsearch->n_point_sets() << std::endl;
-	std::cout << "--- total number of particles     : " << totParticles << std::endl;
+	// std::cout << "--- total number of particle sets : " << nsearch->n_point_sets() << std::endl;
+	// std::cout << "--- total number of particles     : " << totParticles << std::endl;
 
 	// setInitialDeformation();
 }
@@ -151,7 +151,7 @@ void SPHSolver::setInitialConfigurationNeighbors(){
 
 		for (int i = 0; i < ps_i.n_points(); ++i){
 			pData[setName_i]->particleDensity[i] = 0;
-
+			pData[setName_i]->nMap[i].clear();
 			for (const auto& setName_j : setNames){
 
 				if (setName_j != "fluid") continue;
@@ -602,6 +602,27 @@ void SPHSolver::fixedPointIteration(Uint t){
 
 	currentTime += dt;
 
+	std::cout << "	|--- Placing Ghost Particles" << std::endl;	
+	
+	// // // // // // // // // // // // // // // // // // // // // // // 
+	
+	NeighborhoodSearch nsearch1((double)simData["smoothingLength"]*1.1,true);
+	nsearch = &nsearch1;
+
+	addGhostParticles(t);	
+
+	for (const auto& pDatEntry : pData){
+		ids[pDatEntry.first] = nsearch->add_point_set( pDatEntry.second->pos.front().data(), pDatEntry.second->pos.size(), true, true);
+		std::cout << "... Particle set \"" << pDatEntry.first << "\" with " << pDatEntry.second->numParticles << " Particles Set Loaded onto CompactNSearch." << std::endl;
+		if (pDatEntry.second->pos.size() != pDatEntry.second->numParticles)	assert(!(pDatEntry.second->pos.size() == pDatEntry.second->numParticles));
+	}
+
+	nsearch->find_neighbors();
+	trimGhostParticles();
+	// // // // // // // // // // // // // // // // // // // // // // // // 
+
+	if(t == 0) setInitialConfigurationNeighbors();
+
 	std::cout << "   |----------------- Saving x(t)" << std::endl;
 	for (const auto& setName : setNames){
 		const int setID = ids[setName];
@@ -623,11 +644,6 @@ void SPHSolver::fixedPointIteration(Uint t){
 			}
 		}
 	}
-
-	std::cout << "	|--- Placing Ghost Particles" << std::endl;
-	addGhostParticles();
-	reloadAndNeighborSearch();
-	trimGhostParticles();
 
 	for(Uint n = 0; n < (Uint) simData["fixedPointIterations"]; n ++){
 		std::cout << "-------------------- Performing Fixed Point Iteration ... iteration " << n << std::endl;

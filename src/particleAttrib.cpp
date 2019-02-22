@@ -394,15 +394,7 @@ void ParticleAttributes::fluidInit(){
 		}
 		std::cout << "Initialized " << n << " Particles from JSON input file.\n\n" << std::endl;		
 	}
-
-	std::cout << "FUUKCKKCKCK" << std::endl;
-													for (int i = 0; i < pos.size(); ++i){
-
-														print("pos: ", pos[i]);
-														std::cout << i <<"," << isThermalDirichlet[i] << std::endl;
-
-													}
-											
+										
 	
 }
 
@@ -424,6 +416,99 @@ void ParticleAttributes::addParticlesToFluid(){
 		}
 		
 	}
+}
+
+void ParticleAttributes::clearAll(){
+
+	mass.clear();
+	vol.clear();
+	originVol.clear();
+	particleDensity.clear();
+
+	particleDensityGrad.clear();
+	perturb.clear();
+	shift.clear();
+
+	pos.clear();
+
+	posBefore.clear();
+	psi.clear();
+	originPos.clear();
+	
+	nMap.clear();
+	vel.clear();
+	velBefore.clear();
+
+	acc.clear();
+	accBefore.clear();
+	vel_k.clear();
+
+	dens.clear();
+	densdot.clear();
+	dens_k.clear();
+
+	densGrad.clear();
+	tempGrad.clear();
+
+	defoGrad.clear();
+	defoGrad_thermal.clear();
+	defoGrad_elastic.clear();
+	defoGrad_withoutThermal.clear();
+
+	stretch_elastic.clear();
+	stretch_plastic.clear();
+	stretch_plastic_before.clear();
+	stretch_plastic_dot.clear();
+	stretch_plastic_dot_before.clear();
+	stretch_total.clear();
+
+	stretch_dirs.clear();
+	stretch_dirs_before.clear();
+
+	dispGrad.clear();
+	secondPKStress.clear();
+	normalVec.clear();
+	
+	tempDot.clear();
+	tempDotBefore.clear();
+
+	// std::cout << parDataIn["geometry"] << std::endl;
+	isThermalDirichlet.clear();
+	temp.clear();
+	tempBefore.clear();
+
+	isActive.clear();
+	isGhost.clear();
+	isFS.clear();
+	isSolid.clear();
+	conditionNumber.clear();
+	conditionNumber2.clear();
+	curvature.clear();
+
+	L.clear();
+	L_o.clear();
+	L2.clear();
+	velGrad.clear();
+
+	tau.clear();
+	tauDot.clear();
+	tau_k.clear();
+
+	tauGrad.clear();
+
+	enthalpy.clear();
+	enthalpydot.clear();
+	enthalpy_k.clear();
+
+	type.clear();
+	force.clear();
+	bodyForce.clear();
+	isSensor.clear();
+	heatSensed.clear();
+	forceSensed.clear();
+	
+	numParticles = 0;
+
 }
 
 void ParticleAttributes::addDefaultFluidParticleAtPosition(Real3& posToAdd){

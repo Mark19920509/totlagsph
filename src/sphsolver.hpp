@@ -51,7 +51,7 @@ public:
 	void setSensorParticles();
 	void addFluidInletParticles(int t);
 
-	void addGhostParticles();
+	void addGhostParticles(int t);
 	void initGhostMap();
 	void releaseGhostMap();
 	void trimGhostParticles();

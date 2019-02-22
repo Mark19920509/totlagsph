@@ -7,12 +7,13 @@
 	"lambda" : 0.1,
 	"eta": 0.2, 
 
-	"FirstLame" : 50000.0,
-	"shearModulus" : 25000.0,
-	"M":"100000.0",
-	"Youngs":"66666.66666",
+	"FirstLame" : 500000.0,
+	"shearModulus" : 250000.0,
+
+	"M":"1000000.0",
+	"Youngs":"666666.66666",
 	"Poisson":"0.3333333",
-	"beta":"200000.0 * Alpha",
+	"beta":"2000000.0 * Alpha (1000.000000)" , 
 	"A":"100000 + beta * beta * T0 / (1000 * c)",
 
 	"soundSpeed" : 10.0,

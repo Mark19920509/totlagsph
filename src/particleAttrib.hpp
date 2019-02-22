@@ -115,6 +115,7 @@ public:
 
 	ParticleAttributes(const json& inputData, const json& particleData);
 
+	void clearAll();
 	void addParticlesToFluid();
 	void addDefaultFluidParticleAtPosition(Real3& posToAdd);
 

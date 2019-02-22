@@ -2,8 +2,6 @@
 #define CALC_HEAT 1
 
 void SPHSolver::reloadAndNeighborSearch(){
-	delete nsearch;
-	nsearch = new NeighborhoodSearch((double)simData["smoothingLength"]*1.1,true);
 
 	std::cout << "Realoading NSearch Algorithm" << std::endl;
 	currentTime = 0.0;
@@ -32,34 +30,46 @@ void SPHSolver::reloadAndNeighborSearch(){
 
 }
 
-void SPHSolver::addGhostParticles(){
+void SPHSolver::addGhostParticles(int t){
 	using namespace RealOps;
 	// const Real dx = (Real) simData["dx"];
 	// const Uint dims = simData["dimensions"];
 	// const Real smoothingLength = (Real) simData["smoothingLength"];
+
+	if ( t == 0 ){
+		std::cout << "Computing the initial particle density" << std::endl;
+		for (const auto& setName_i : setNames){
+			const int n_i = pData[setName_i]->numParticles;	
+			std::cout << n_i << std::endl;
+			if (setName_i != "fluid") continue;
+			#pragma omp parallel for num_threads(NUMTHREADS) 
+			for (int i = 0; i < n_i; ++i){
+				pData[setName_i]->particleDensity[i] = 0;
+				for (int j = 0; j < n_i; j++){
+					Real3  relpos = sub(pData[setName_i]->pos[i],pData[setName_i]->pos[j]);
+					Real     dist = length(relpos);	
+					Real      Wij = W_ij(dist, smoothingLength);					
+					if (dist < smoothingLength){
+						pData[setName_i]->particleDensity[i] += pData[setName_i]->vol[j] * Wij; 
+					}
+				}
+			}
+		}	
+	}
+
+
+	std::cout << "Adding the ghost particles" << std::endl;
     const int m = (int) ((smoothingLength + (dx / 2.0)) / dx);
-
-
-	json ghostDataInput = pData["ghost"]->parDataIn;
-	delete pData["ghost"];
-	pData["ghost"] = new ParticleAttributes(simData, ghostDataInput);
-	
+	pData["ghost"]->clearAll();
     ghostMap.clear();
 
 	for (const auto& setName_i : setNames){
-
-		const int setID_i = ids[setName_i];
-		const auto& ps_i = nsearch->point_set(setID_i);
-        if (setName_i != "fluid") continue;
-
-		for (int i = 0; i < ps_i.n_points(); ++i){
-
-			if ( pData[setName_i]->particleDensity[i] > simData["ghostTol"]) continue;		            
-            // std::cout << pData[setName_i]->particleDensity[i] << std::endl;
+		const int n_i = pData[setName_i]->numParticles;		
+		if (setName_i != "fluid") continue;
+		for (int i = 0; i < n_i; ++i){
+			if ( pData[setName_i]->particleDensity[i] > simData["ghostTol"]) continue;
 			Real3& pos_i = pData[setName_i]->pos[i];
-            for (int ii = -m; ii <= m; ii ++){
-                
-            for (int jj = -m; jj <= m; jj ++){
+            for (int ii = -m; ii <= m; ii ++){for (int jj = -m; jj <= m; jj ++){
                 if (dims == 2){
 
                     int nx = ((int)(pos_i[0] / dx) - ii);
@@ -71,7 +81,7 @@ void SPHSolver::addGhostParticles(){
                     if (ghostMap.count(key) > 0) continue;                    
                     ghostMap[key] = true;
 					// std::cout << "jarjar" << std::endl;
-                    Real3 posToPush{nx * dx, ny * dx, 0};                        
+                    Real3 posToPush{nx * dx, ny * dx, EPSL_SMALL2};                        
                     pData["ghost"]->addDefaultFluidParticleAtPosition(posToPush);
 					// std::cout << "binks" << std::endl;
                     pData["ghost"]->isGhost.back() = true;
@@ -81,7 +91,9 @@ void SPHSolver::addGhostParticles(){
 
             
 		}
-	}    
+	}
+
+	std::cout << "ghosts : " << pData["ghost"]->numParticles << std::endl;
 
 }
 
@@ -92,12 +104,12 @@ void SPHSolver::trimGhostParticles(){
 	// const Uint dims = simData["dimensions"];
 	// const Real smoothingLength = (Real) simData["smoothingLength"];
     const int m = (int) ((smoothingLength + (dx / 2.0)) / dx);
-
+	std::cout << "Trimming the ghost particles" << std::endl;
 	for (const auto& setName_i : setNames){
 
 		const int setID_i = ids[setName_i];
 		const auto& ps_i = nsearch->point_set(setID_i);
-		std::cout << setName_i << std::endl;
+		std::cout << setName_i << ", "<< ps_i.n_points() << std::endl;
         if (setName_i != "ghost") continue;
 
 		#pragma omp parallel for num_threads(NUMTHREADS) 
@@ -234,6 +246,7 @@ void SPHSolver::computeInteractions(Uint t){
 			pData[setName_i]->tempGrad[i] = zerovec;
 			pData[setName_i]->acc[i] = zerovec;
 			pData[setName_i]->tempDot[i] = 0;
+			pData[setName_i]->particleDensity[i] = 0;
 
 
 			for (const auto& setName_j : setNames){
@@ -302,7 +315,7 @@ void SPHSolver::computeInteractions(Uint t){
 
 					// Damping for solid model
 					if( !isGhost_i && !isGhost_j){
-
+						pData[setName_i]->particleDensity[i] += pData[setName_j]->vol[j] * Wij; 
 						pData[setName_i]->acc[i] = add(pData[setName_i]->acc[i],
 														mult(	- pData[setName_j]->mass[j] / pData[setName_i]->dens[i],
 																mult(
@@ -364,6 +377,7 @@ void SPHSolver::computeInteractions(Uint t){
 				}
 			}
 
+			pData[setName_i]->particleDensity[i] += pData[setName_i]->vol[i] * W_ij(0, smoothingLength);
 
 			if (isBoundary_i){
 				pData[setName_i]->acc[i] = zerovec;
@@ -412,7 +426,7 @@ void SPHSolver::computeDeformationGradient2(Uint t){
 			const Real3&   pos_i_o = pData[setName_i]->originPos[i];
 			const Real3&   pos_i = pData[setName_i]->pos[i];
 			const Real&   temp_i = pData[setName_i]->temp[i];
-
+			
 			F_i = zeromat;
 			F_theta_i = add(identity(), mult(pData[setName_i]->getThermalExpansion() * (Real) temp_i, identity()));
 			if(t == 0){ L_i_o = zeromat; }
@@ -450,7 +464,8 @@ void SPHSolver::computeDeformationGradient2(Uint t){
 
 			setDims(F_i, dims);
 			
-			F_elastic_i = mult(F_i, inv3x3(F_theta_i, dims));
+			// F_elastic_i = mult(F_i, inv3x3(F_theta_i, dims));
+			F_elastic_i = mult(1.0 / (1.0 + pData[setName_i]->getThermalExpansion() * (Real) temp_i),F_i);
 			// print(F_i);
 			// print(F_theta_i);
 			// print(F_elastic_i);

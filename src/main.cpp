@@ -51,7 +51,6 @@ int main ( void ){
 			for(int t=0;t<(Uint)simDataInput["steps"];t++){
 				
 				solver.marchTime(t);
-
 				if (t >= (Uint)simDataInput["outputStart"]){
 					// std::cout << "asdf : " << (t+1) % ((Uint)simDataInput["outper"]) << std::endl;
 				if ((t+1) % ((Uint)simDataInput["outper"]) == 0)
