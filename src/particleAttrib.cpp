@@ -260,7 +260,6 @@ void ParticleAttributes::fluidInit(){
 
 	inletWidth    = (Real)parDataIn["inlet"]["width"];
 
-
 	if (simDataIn["dimensions"] == 2){
 
 		std::cout << "... Assigning the inlet properties " << std::endl;
@@ -352,6 +351,7 @@ void ParticleAttributes::fluidInit(){
 		for (int i = offset; i <= (int)((x1 - x0)/dx) - offset; i ++ ){
 		for (int j = jstart; j <= jend; j ++ ){
 		for (int k = kstart; k <= kend; k ++ ){
+			// std::cout << i << ", " << j << ", " << k << std::endl;
 
 			Real3 zeroVector{0,0,0};
 			Real3x3 zeromat{zeroVector,zeroVector,zeroVector};
@@ -365,7 +365,7 @@ void ParticleAttributes::fluidInit(){
 		  posToAdd = add(posToAdd,_perturb);
 
 			addDefaultFluidParticleAtPosition(posToAdd, 0 );
-
+			// std::cout << vol.back() << std::endl;
 			if( std::abs((Real)parDataIn["geometry"]["thermalDirichlet"][0] - posToAdd[0]) < 0.5 * dx ){
 				isThermalDirichlet[pos.size() - 1] = true;
 				temp[pos.size() - 1] = (Real)parDataIn["geometry"]["tempBound"];
@@ -375,7 +375,7 @@ void ParticleAttributes::fluidInit(){
 		}}}
 
 
-		std::cout << "Initialized Block of " << n << " Particles from input file.\n\n" << std::endl;
+		std::cout << "Initialized Block of " << pos.size() << " Particles from input file.\n\n" << std::endl;
 	} else if (parDataIn["geometry"]["type"] == "pointCloud"){
 		std::string fileName = parDataIn["geometry"]["file"];
 		readInitialPlacement(fileName);

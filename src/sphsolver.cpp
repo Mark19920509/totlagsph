@@ -61,35 +61,6 @@ SPHSolver::SPHSolver(json& _simData, std::map<std::string,ParticleAttributes*>& 
 	// setInitialDeformation();
 }
 
-void SPHSolver::addFluidInletParticles(int t){
-
-	if ( t % (int)( ((Real) (pData["fluid"]->dx)) / ((Real) (pData["fluid"]->inletSpeed) * (Real) simData["dt"] ) ) != 0 ) return;
-
-	std::cout << "... Adding inlet particles" << std::endl;
-	pData["fluid"]->addParticlesToFluid();
-
-	std::cout << "... Freeing nsearch instance" << std::endl;
-	delete nsearch;
-	nsearch = new NeighborhoodSearch((double)simData["smoothingLength"],true);
-
-	for (const auto& pDatEntry : pData){
-		ids[pDatEntry.first] = nsearch->add_point_set( pDatEntry.second->pos.front().data(), pDatEntry.second->pos.size(), true, true);
-		std::cout << "... Particle set \"" << pDatEntry.first << "\" with " << pDatEntry.second->numParticles << " Particles Set Loaded onto CompactNSearch." << std::endl;
-		if (pDatEntry.second->pos.size() != pDatEntry.second->numParticles)	assert(!(pDatEntry.second->pos.size() == pDatEntry.second->numParticles));
-	}
-
-	// There is a bug in the nsearch code that freezes the code at this part.
-	// nsearch->resize_point_set(ids["fluid"], 
-	// 							  pData["fluid"]->pos.front().data(),
-	// 							  pData["fluid"]->pos.size());
-								
-	// if (pData["fluid"]->pos.size() != pData["fluid"]->numParticles)	assert(!(pData["fluid"]->pos.size() == pData["fluid"]->numParticles));
-
-	std::cout << "... Resized searching algorithm for the inlet particles" << std::endl;
-
-}
-
-
 void SPHSolver::initializeMass(){
 
 	std::cout << "--- Initializing particle volume / mass." << std::endl;
@@ -146,7 +117,7 @@ void SPHSolver::setInitialConfigurationNeighbors(){
 		// std::cout << setName_i << std::endl;
 
 		const int setID_i = ids[setName_i];
-		if (setName_i != "fluid") continue;
+		if (setName_i.substr(0,5) != "fluid") continue;
 		const auto& ps_i = nsearch->point_set(setID_i);
 
 		for (int i = 0; i < ps_i.n_points(); ++i){
@@ -154,7 +125,8 @@ void SPHSolver::setInitialConfigurationNeighbors(){
 			pData[setName_i]->nMap[i].clear();
 			for (const auto& setName_j : setNames){
 
-				if (setName_j != "fluid") continue;
+				if (setName_j.substr(0,5) != "fluid") continue;
+
 				const int setID_j = ids[setName_j];
 				const auto& ps_j = nsearch->point_set(setID_j);
 
@@ -183,7 +155,7 @@ void SPHSolver::setInitialDeformation(){
 		const auto& ps_i = nsearch->point_set(setID_i);
 
 		for (int i = 0; i < ps_i.n_points(); ++i){
-				if(setName_i == "fluid" && pData[setName_i]->isSolid[i]){
+				if(setName_i.substr(0,5) == "fluid" && pData[setName_i]->isSolid[i]){
 					pData[setName_i]->pos[i] = add(pData[setName_i]-> originPos[i] , Real3{((0) * pData[setName_i]->originPos[i][0]  + 0.0  * pData[setName_i]->originPos[i][1]),
 																							(0.01 * pData[setName_i]->originPos[i][0]   + 0.0  * pData[setName_i]->originPos[i][1]),0} );				
 				}
@@ -193,26 +165,6 @@ void SPHSolver::setInitialDeformation(){
 }
 
 
-void SPHSolver::setSensorParticles(){
-	for(auto& sensor : simData["sensors"]){
-		if ( sensor["type"] == "sensorZPlane" ){
-			Real sensorLocation = (Real)sensor["coord"];
-			std::cout << "--- Creating Sensor Plane (Z = " << sensor["coord"] << ")" << std::endl;
-			for (const auto& setName : setNames){
-				const int setID = ids[setName];
-				const auto& ps = nsearch->point_set(setID);
-				if (setName == "boundary"){
-					#pragma omp parallel for num_threads(NUMTHREADS)
-					for (int i = 0; i < ps.n_points(); ++i){
-						if ( abs(pData[setName]->pos[i][2] - sensorLocation) < simData["smoothingLength"] ){
-							pData[setName]->isSensor[i] = true;
-						}
-					}
-				}
-			}
-
-	}}
-}
 
 void SPHSolver::setThermalConductivityModel(){
 	if( simData["thermalConductivity"] == "Constant"){
@@ -523,7 +475,7 @@ void SPHSolver::computeDeformationGradient(Uint t){
 
 			Real thermalDeform = 1.0 + pData[setName_i]->getThermalExpansion() * pData[setName_i]->temp[i];
 			pData[setName_i]->defoGrad[i] = zeromat;
-			if ( pData[setName_i]->isSolid[i] && setName_i == "fluid" ){
+			if ( pData[setName_i]->isSolid[i] && setName_i.substr(0,5) == "fluid" ){
 				// pData[setName_i]->defoGrad_thermal[i] = mult((thermalDeform),identity());
 				pData[setName_i]->defoGrad_thermal[i] = mult( thermalDeform ,identity());
 			}
@@ -619,6 +571,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 
 	nsearch->find_neighbors();
 	trimGhostParticles();
+
 	// // // // // // // // // // // // // // // // // // // // // // // // 
 
 	if(t == 0) setInitialConfigurationNeighbors();
@@ -628,18 +581,19 @@ void SPHSolver::fixedPointIteration(Uint t){
 		const int setID = ids[setName];
 		const auto& ps = nsearch->point_set(setID);
 
-		if(setName == "fluid"){
+		if(setName.substr(0,5) == "fluid"){
 			#pragma omp parallel for num_threads(NUMTHREADS) 
 			for (int i = 0; i < ps.n_points(); ++i){
 
 				pData[setName]->posBefore[i]  = pData[setName]->pos[i];
 				pData[setName]->velBefore[i]  = pData[setName]->vel[i];			
 				pData[setName]->accBefore[i]  = pData[setName]->acc[i];			
-
+				// std::cout << pData[setName]->vol[i] << std::endl;
 				if(!pData[setName]->isThermalDirichlet[i]){
 					pData[setName]->tempBefore[i]    = pData[setName]->temp[i];			
 					pData[setName]->tempDotBefore[i] = pData[setName]->tempDot[i];			 
 				} 
+
 
 			}
 		}
@@ -648,7 +602,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 	for(Uint n = 0; n < (Uint) simData["fixedPointIterations"]; n ++){
 		std::cout << "-------------------- Performing Fixed Point Iteration ... iteration " << n << std::endl;
 		Real norm = 0;
-		// computeDeformationGradient(t);
+
 		computeDeformationGradient2(t);
 		setGhostParticleTemperatures();
 		computeInteractions(t);
@@ -658,10 +612,10 @@ void SPHSolver::fixedPointIteration(Uint t){
 			const int setID = ids[setName];
 			const auto& ps = nsearch->point_set(setID);
 
-			if( setName == "fluid" ){
+			if( setName.substr(0,5) == "fluid" ){
 				#pragma omp parallel for num_threads(NUMTHREADS) 
 				for (int i = 0; i < ps.n_points(); ++i){
-
+					// print("ACC : ", pData[setName]->acc[i]);
 					pData[setName]->pos[i] = add(
 												pData[setName]->posBefore[i],
 												 add(mult(dt, pData[setName]->velBefore[i]), 
@@ -680,7 +634,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 						pData[setName]->temp[i] = pData[setName]->tempBefore[i] + (dt / 2.0) * (pData[setName]->tempDot[i] + pData[setName]->tempDotBefore[i]);
 					}
 
-					norm += length(pData["fluid"]->psi[i],pData[setName]->pos[i]);
+					norm += length(pData[setName]->psi[i],pData[setName]->pos[i]);
 					pData[setName]->psi[i] = pData[setName]->pos[i];
 
 				}
@@ -691,32 +645,9 @@ void SPHSolver::fixedPointIteration(Uint t){
 		}
 		
 		std::cout << "dumb norm : " << norm << std::endl;
-		// if(norm < 1.0E-9){
-			// std::cout << "converged?" << std::endl;
-			// break;
-		// }
+	
 	}
 
-	// XSPH(t);
-
-
-	// for (const auto& setName : setNames){
-
-	// 	const int setID = ids[setName];
-	// 	const auto& ps = nsearch->point_set(setID);
-
-	// 	if( setName == "fluid"){
-	// 		#pragma omp parallel for num_threads(NUMTHREADS) 
-	// 		for (int i = 0; i < ps.n_points(); ++i){
-
-	// 			pData[setName]->vel[i] = add(
-	// 									pData[setName]->vel[i],
-	// 									mult(dt / 2.0, add(pData[setName]->acc[i], pData[setName]->accBefore[i]))
-	// 									);
-
-	// 		}
-	// 	}
-	// }
 
 	
 	
@@ -732,122 +663,4 @@ void SPHSolver::marchTime(Uint t){
 
 	fixedPointIteration(t);
 
-	// std::cout << "	|--- Updating Position " << std::endl;		
-
-	// for (const auto& setName : setNames){
-
-	// 	const int setID = ids[setName];
-	// 	const auto& ps = nsearch->point_set(setID);
-
-
-	// 	if( simData["computeElasticity"] == "Yes" ) computeDeformationGradient(t);
-	// 	std::cout << "	|--- Calculating Interatctions" << std::endl;
-	// 	computeInteractions(t);
-	// 	std::cout << "	|--- Updating Vectors" << std::endl;
-
-		
-
-	// 	if( setName == "fluid"){
-	// 	// Fluid Particles    : march the position, velocity, density.
-	// 		#pragma omp parallel for num_threads(NUMTHREADS) 
-	// 		for (int i = 0; i < ps.n_points(); ++i){
-	// 			pData[setName]->vel[i]  = add(pData[setName]->vel[i], mult(dt,pData[setName]->acc[i]));
-	// 			pData[setName]->pos[i]  = add(pData[setName]->pos[i], mult(dt,pData[setName]->vel[i]));
-
-	// 			// ######################################
-	// 			// Test For Deformation Gradient
-	// 			// pData[setName]->pos[i] = add(pData[setName]-> pos[i] , Real3{(0.0 * pData[setName]->originPos[i][0] + 0.0  * pData[setName]->originPos[i][1]),
-	// 																		//  (dt * 0.05 * pData[setName]->originPos[i][0] + 0.0  * pData[setName]->originPos[i][1]),0} );
-	// 			// pData[setName]->pos[i] = add(pData[setName]-> pos[i] , Real3{dt * (0.5 * pData[setName]->originPos[i][0] + 0.0  * pData[setName]->originPos[i][1]),
-	// 																		//  dt * (0.5 * pData[setName]->originPos[i][0] + 0.25 * pData[setName]->originPos[i][1]),0} );
-	// 			// pData[setName]->pos[i] = Real3{(std::cos(currentTime) * pData[setName]->originPos[i][0] - std::sin(currentTime) * pData[setName]->originPos[i][1]),
-	// 										//    (std::sin(currentTime) * pData[setName]->originPos[i][0] + std::cos(currentTime) * pData[setName]->originPos[i][1]),0};
-	// 			// ######################################
-
-	// 			// Density updates for WCSPH should only be considered for non-solid particles
-	// 			if(!pData[setName]->isSolid[i]) pData[setName]->dens[i] = pData[setName]->dens[i] + dt * pData[setName]->densdot[i];
-	// 			pData[setName]->temp[i] = pData[setName]->temp[i] + dt * pData[setName]->enthalpydot[i];					
-	// 			pData[setName]->tau[i] = add(pData[setName]->tau[i],mult(dt, pData[setName]->tauDot[i]));				
-	// 		}
-	// 	} else if (setName == "boundary"){
-	// 	// Boundary Particles : march the density only.
-	// 		#pragma omp parallel for num_threads(NUMTHREADS)
-	// 		for (int i = 0; i < ps.n_points(); ++i){
-	// 			pData[setName]->dens[i] = pData[setName]->dens[i]  + dt * pData[setName]->densdot[i];
-	// 			pData[setName]->temp[i] = pData[setName]->temp[i] + dt * pData[setName]->enthalpydot[i] / (pData[setName]->getSpecificHeat());
-	// 		}
-	// 	}
-	// }
-
-
 }
-
-
-		// 	Unused code, formulation from Fatehi et al. Very sensitive with numerical precision.
-		// 	Tensor4 Q_i, R_i;
-		// 	Tensor3 S_i, P_i;
-		// 	for (const auto& setName_j : setNames){
-
-		// 		const int setID_j = ids[setName_j];
-		// 		const auto& ps_j = nsearch->point_set(setID_j);
-
-		// 		for (int _j = 0; _j < ps_i.n_neighbors(setID_j,i); _j++){
-
-		// 			// Index of neighbor particle in setID_j
-		// 			Uint const j = ps_i.neighbor(setID_j, i, _j);
-
-		// 			// Define all the ingedients for the particle interaction
-		// 			Real    rho_j = pData[setName_j]->dens[j];
-		// 			Real3  relpos = sub(pData[setName_i]->pos[i],pData[setName_j]->pos[j]);
-		// 			Real     dist = length(relpos);
-
-		// 			if ( dist > smoothingLength) continue;
-		// 			Real3  reldir = divide(relpos,dist);
-		// 			Real    vol_j = pData[setName_j]->vol[j];
-        //   			Real      Wij = W_ij(dist, smoothingLength);
-		// 			Real3    gWij = gW_ij(dist, reldir, smoothingLength);
-
-		// 			for (int m=0;m<3;m++) for(int n=0;n<3;n++) for(int o=0;o<3;o++) for(int p=0;p<3;p++)
-		// 				R_i(m,n,o,p) = R_i(m,n,o,p) + vol_j * relpos[m] * reldir[n] * reldir[o] * gWij[p];
-
-		// 			for (int m=0;m<3;m++) for(int n=0;n<3;n++) for(int k=0;k<3;k++)
-		// 				S_i(m,n,k) = S_i(m,n,k) + vol_j * reldir[m] * reldir[n] * gWij[k];
-					
-		// 			for (int l=0;l<3;l++) for(int o=0;o<3;o++) for(int p=0;p<3;p++)
-		// 				P_i(l,o,p) = P_i(l,o,p) + vol_j * relpos[l] * relpos[o] * gWij[p];
-		// 		}
-		// 	}
-
-
-		// 	contract_323_to_4(S_i,L_i,P_i,Q_i);
-
-
-		// 	Q_i.add(R_i);
-
-
-			
-
-		// 	for(int I=0;I<6;I++){
-		// 		Uint m = IDXPAIR[I][0]; Uint n = IDXPAIR[I][1];
-		// 		for(int J=0;J<6;J++){
-		// 			Uint o = IDXPAIR[J][0]; Uint p = IDXPAIR[J][1];
-		// 			_Q_i(I,J) = Q_i(m,n,o,p);
-		// 		}
-		// 	}
-		// 	if(i == 1300){
-		// 		std::cout << "before" << std::endl;
-		// 		std::cout << _Q_i << std::endl;
-		// 	}
-
-		// 	if(dims == 2){
-		// 		_Q_i(2,2) = 1.0; _Q_i(4,4) = 1.0; _Q_i(5,5) = 1.0;
-		// 	} else if (dims == 1){
-		// 		_Q_i(1,1) = 1.0; _Q_i(2,2) = 1.0; _Q_i(3,3) = 1.0; _Q_i(4,4) = 1.0; _Q_i(5,5) = 1.0;		
-		// 	}
-
-		// 	JacobiSVD<MatrixXd> svd_L2_i(_Q_i);
-		// 	Real cond_second_i = svd_L2_i.singularValues()(0) / svd_L2_i.singularValues()(svd_L2_i.singularValues().size()-1);		
-		// 	pData[setName_i]->isFS[i] = cond_second_i;			
-
-		// 	L2_i = toReal3x3(_Q_i.fullPivLu().solve(neg_delta_mn));
-		

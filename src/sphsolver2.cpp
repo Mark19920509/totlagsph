@@ -41,7 +41,7 @@ void SPHSolver::addGhostParticles(int t){
 		for (const auto& setName_i : setNames){
 			const int n_i = pData[setName_i]->numParticles;	
 			std::cout << n_i << std::endl;
-			if (setName_i != "fluid") continue;
+			if (setName_i.substr(0,5) != "fluid") continue;
 			#pragma omp parallel for num_threads(NUMTHREADS) 
 			for (int i = 0; i < n_i; ++i){
 				pData[setName_i]->particleDensity[i] = 0;
@@ -65,7 +65,7 @@ void SPHSolver::addGhostParticles(int t){
 
 	for (const auto& setName_i : setNames){
 		const int n_i = pData[setName_i]->numParticles;		
-		if (setName_i != "fluid") continue;
+		if (setName_i.substr(0,5) != "fluid") continue;
 		for (int i = 0; i < n_i; ++i){
 			if ( pData[setName_i]->particleDensity[i] > simData["ghostTol"]) continue;
 			Real3& pos_i = pData[setName_i]->pos[i];
@@ -110,7 +110,7 @@ void SPHSolver::trimGhostParticles(){
 		const int setID_i = ids[setName_i];
 		const auto& ps_i = nsearch->point_set(setID_i);
 		std::cout << setName_i << ", "<< ps_i.n_points() << std::endl;
-        if (setName_i != "ghost") continue;
+        if (setName_i.substr(0,5) != "ghost") continue;
 
 		#pragma omp parallel for num_threads(NUMTHREADS) 
 
@@ -155,8 +155,8 @@ void SPHSolver::setGhostParticleTemperatures(){
 
 		#pragma omp parallel for num_threads(NUMTHREADS)
 		for (int i = 0; i < ps_i.n_points(); ++i){
-			bool isBoundary_i = (setName_i == "boundary") ? true : false;
-			bool isGhost_i = (setName_i == "ghost") ? true : false;
+			bool isBoundary_i = (setName_i.substr(0,8) == "boundary") ? true : false;
+			bool isGhost_i = (setName_i.substr(0,5) == "ghost") ? true : false;
 
 			// Only need to set temperature for the ghost particles
 			if(!isGhost_i) continue;
@@ -165,8 +165,8 @@ void SPHSolver::setGhostParticleTemperatures(){
 				const int setID_j = ids[setName_j];
 				const auto& ps_j = nsearch->point_set(setID_j);
 
-				const bool isBoundary_j = (setName_j == "boundary") ? true : false;
-				const bool isGhost_j = (setName_j == "ghost") ? true : false;				
+				const bool isBoundary_j = (setName_j.substr(0,8) == "boundary") ? true : false;
+				const bool isGhost_j = (setName_j.substr(0,5) == "ghost") ? true : false;				
 
 				// If the neighbor is another ghost particle, we don't care.
 				if(isGhost_j) continue;
@@ -210,14 +210,14 @@ void SPHSolver::computeInteractions(Uint t){
 	std::cout << "		|------ ... Performing Fluid - (Fluid / Boundary) Interactions"<< std::endl;
 	for (const auto& setName_i : setNames){
 
-		const bool isGhost_i = (setName_i == "ghost");
+		const bool isGhost_i = (setName_i.substr(0,5) == "ghost");
 		const int setID_i = ids[setName_i];
 		const auto& ps_i = nsearch->point_set(setID_i);
 
 		// Ghost particles don't have any time derivatives to compute
 		if (isGhost_i) continue;
 
-		#pragma omp parallel for num_threads(NUMTHREADS)
+		// #pragma omp parallel for num_threads(NUMTHREADS)
 
 		for (int i = 0; i < ps_i.n_points(); ++i){
 
@@ -240,8 +240,8 @@ void SPHSolver::computeInteractions(Uint t){
 			const Real& pDens_i = pData[setName_i]->particleDensity[i];
 
 			bool isSensor_i   = (pData[setName_i]->isSensor[i]);
-			bool isBoundary_i = (setName_i == "boundary") ? true : false;
-			bool isGhost_i = (setName_i == "ghost") ? true : false;
+			bool isBoundary_i = (setName_i.substr(0,8) == "boundary") ? true : false;
+			bool isGhost_i = (setName_i.substr(0,5) == "ghost") ? true : false;
 
 			pData[setName_i]->tempGrad[i] = zerovec;
 			pData[setName_i]->acc[i] = zerovec;
@@ -253,8 +253,8 @@ void SPHSolver::computeInteractions(Uint t){
 
 				const int setID_j = ids[setName_j];
 				const auto& ps_j = nsearch->point_set(setID_j);
-				const bool isBoundary_j = (setName_j == "boundary") ? true : false;
-				const bool isGhost_j = (setName_j == "ghost") ? true : false;				
+				const bool isBoundary_j = (setName_j.substr(0,8) == "boundary") ? true : false;
+				const bool isGhost_j = (setName_j.substr(0,5) == "ghost") ? true : false;				
 				
 				// Loop over the neighbors of particl i in the indexed particle set.
 				for (int _j = 0; _j < ps_i.n_neighbors(setID_j,i); _j++){
@@ -278,6 +278,8 @@ void SPHSolver::computeInteractions(Uint t){
 					
 					const Real&      m_j   = pData[setName_j]->mass[j];
 					const Real&    vol_j   = pData[setName_j]->vol[j];
+
+
 
 					const Real3& vel_j = pData[setName_j]->vel[j];
 					const Real3& normal_j =  pData[setName_j]->normalVec[j];
@@ -330,7 +332,9 @@ void SPHSolver::computeInteractions(Uint t){
 																)
 														)
 							 						   );
-
+						// std::cout << simData["damping"] << std::endl;
+						// std::cout << setName_j << std::endl;
+						// std::cout << pData[setName_j]->vol[j] << std::endl;
 						pData[setName_i]->acc[i] = add(pData[setName_i]->acc[i],
 								mult(	- (Real) simData["damping"] * pData[setName_j]->vol[j],
 										mult(Wij, relvel))
@@ -408,7 +412,7 @@ void SPHSolver::computeDeformationGradient2(Uint t){
 	for (const auto& setName_i : setNames){
 
 		const int setID_i = ids[setName_i];
-		if (setName_i != "fluid") continue;
+		if (setName_i.substr(0,5) != "fluid") continue;
 		const auto& ps_i = nsearch->point_set(setID_i);
 		
 		#pragma omp parallel for num_threads(NUMTHREADS)
@@ -435,7 +439,7 @@ void SPHSolver::computeDeformationGradient2(Uint t){
 			for(const auto& j_ : pData[setName_i]->nMap[i]){
 				const std::string setName_j = std::get<0>(j_);
 				const Uint j = std::get<1>(j_);
-				if (setName_j != "fluid") continue;
+				if (setName_j.substr(0,5) != "fluid") continue;
 				const Real&    vol_j_o = pData[setName_j]->originVol[j];
 				const Real3&   pos_j_o = pData[setName_j]->originPos[j];
 				const Real3&   pos_j = pData[setName_j]->pos[j];
@@ -471,18 +475,16 @@ void SPHSolver::computeDeformationGradient2(Uint t){
 			// print(F_elastic_i);
 
 
-			if( setName_i == "fluid" ){	
-				// Infinitesimal strain
-				Real3x3 strainTensor_i = mult(0.5, sub( mult(transpose(F_elastic_i),F_elastic_i), identity()));
-				Real3x3 strainTensorVol_i = mult(0.333333333333 * trace(strainTensor_i), identity());
-				Real3x3 strainTensorDev_i = sub(strainTensor_i, strainTensorVol_i);
+			// Infinitesimal strain
+			Real3x3 strainTensor_i = mult(0.5, sub( mult(transpose(F_elastic_i),F_elastic_i), identity()));
+			Real3x3 strainTensorVol_i = mult(0.333333333333 * trace(strainTensor_i), identity());
+			Real3x3 strainTensorDev_i = sub(strainTensor_i, strainTensorVol_i);
 
-				// Second Piola-Kirchhoff Stress				
-				secondPKStress_i = add(
-										mult(     (Real) pData[setName_i]->getFirstLame() , strainTensorVol_i),
-										mult(2. * (Real) pData[setName_i]->getShearModulus(), strainTensorDev_i)
-									);
-			}
+			// Second Piola-Kirchhoff Stress				
+			secondPKStress_i = add(
+									mult(     (Real) pData[setName_i]->getFirstLame() , strainTensorVol_i),
+									mult(2. * (Real) pData[setName_i]->getShearModulus(), strainTensorDev_i)
+								);
 
 			vol_i = vol_i_o * det3x3(F_i);
 		}
