@@ -447,7 +447,7 @@ void SPHSolver::computeDeformationGradient(Uint t){
 		const int setID_i = ids[setName_i];
 		const auto& ps_i = nsearch->point_set(setID_i);
 		
-		// #pragma omp parallel for num_threads(NUMTHREADS)
+		#pragma omp parallel for num_threads(NUMTHREADS)
 		for (int i = 0; i < ps_i.n_points(); ++i){
 
 
@@ -561,7 +561,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 	NeighborhoodSearch nsearch1((double)simData["smoothingLength"]*1.1,true);
 	nsearch = &nsearch1;
 
-	addGhostParticles(t);	
+	// addGhostParticles(t);	
 
 	for (const auto& pDatEntry : pData){
 		ids[pDatEntry.first] = nsearch->add_point_set( pDatEntry.second->pos.front().data(), pDatEntry.second->pos.size(), true, true);
@@ -570,7 +570,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 	}
 
 	nsearch->find_neighbors();
-	trimGhostParticles();
+	// trimGhostParticles();
 
 	// // // // // // // // // // // // // // // // // // // // // // // // 
 
@@ -593,7 +593,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 					pData[setName]->tempBefore[i]    = pData[setName]->temp[i];			
 					pData[setName]->tempDotBefore[i] = pData[setName]->tempDot[i];			 
 				} 
-
+				
 
 			}
 		}
@@ -604,7 +604,7 @@ void SPHSolver::fixedPointIteration(Uint t){
 		Real norm = 0;
 
 		computeDeformationGradient2(t);
-		setGhostParticleTemperatures();
+		// setGhostParticleTemperatures();
 		computeInteractions(t);
 		
 		for (const auto& setName : setNames){
@@ -619,19 +619,21 @@ void SPHSolver::fixedPointIteration(Uint t){
 					pData[setName]->pos[i] = add(
 												pData[setName]->posBefore[i],
 												 add(mult(dt, pData[setName]->velBefore[i]), 
-													 mult(dt * dt / 4.0,add(pData[setName]->acc[i], pData[setName]->accBefore[i]))
+													 mult(dt * dt / 3.0,add(pData[setName]->acc[i], pData[setName]->accBefore[i]))
 													 )
 												);	
-					pData[setName]->pos[i][1] = pData[setName]->posBefore[i][1]; // Force zero deformation in the y-dir
+					// pData[setName]->pos[i][1] = pData[setName]->posBefore[i][1]; // Force zero deformation in the y-dir
 
 					pData[setName]->vel[i] = add(
 												pData[setName]->velBefore[i],
 												mult(dt / 2.0, add(pData[setName]->acc[i], pData[setName]->accBefore[i]))
 											);
-					pData[setName]->vel[i][1] = 0; // Force zero deformation in the y-dir.
+
+					// pData[setName]->vel[i][1] = 0; // Force zero deformation in the y-dir.
 
 					if(!pData[setName]->isThermalDirichlet[i]){
-						pData[setName]->temp[i] = pData[setName]->tempBefore[i] + (dt / 2.0) * (pData[setName]->tempDot[i] + pData[setName]->tempDotBefore[i]);
+						// pData[setName]->temp[i] = pData[setName]->tempBefore[i] + (dt / 2.0) * (pData[setName]->tempDot[i] + pData[setName]->tempDotBefore[i]);
+						pData[setName]->temp[i] = std::min(0.00522911 / 4.0 * t, 52.2911);
 					}
 
 					norm += length(pData[setName]->psi[i],pData[setName]->pos[i]);

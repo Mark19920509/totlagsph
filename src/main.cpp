@@ -16,22 +16,22 @@ int main ( void ){
 
 	std::cout << ">>> Starting Program." << std::endl;
 	std::map<std::string,ParticleAttributes*> pData;
-	json simDataInput, fluidDataInput, boundaryDataInput, ghostDataInput;
+	json simDataInput, fluidDataInput, fluidDataInput2;
 	std::cout << ">>> Reading system parameters." << std::endl;
 	readJSON(simDataInput,      "../inputs/constants.json");
+
 	std::cout << ">>> Reading fluid Data." << std::endl;
 	readJSON(fluidDataInput,    "../inputs/fluid.json");
-	std::cout << ">>> Reading boundary Data." << std::endl;
-	readJSON(boundaryDataInput, "../inputs/boundary.json");
-	std::cout << ">>> Reading Ghost Particle Data." << std::endl;
-	readJSON(ghostDataInput, "../inputs/ghost.json");
+
+	std::cout << ">>> Reading fluid Data." << std::endl;
+	readJSON(fluidDataInput2,    "../inputs/fluid2.json");
 
 	if( simDataInput["operation"] == "SPHSimulation" ){
 		
 		std::cout << ">>> Operation : SPHSimulation" << std::endl;
 
-		pData["fluid"] = new ParticleAttributes(simDataInput, fluidDataInput);
-		pData["ghost"] = new ParticleAttributes(simDataInput, ghostDataInput);
+		pData["fluid1"] = new ParticleAttributes(simDataInput, fluidDataInput);
+		pData["fluid2"] = new ParticleAttributes(simDataInput, fluidDataInput2);
 
 		// std::cout << ">>> End of Particle Definition." << std::endl;
 

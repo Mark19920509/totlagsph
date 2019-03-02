@@ -217,7 +217,7 @@ void SPHSolver::computeInteractions(Uint t){
 		// Ghost particles don't have any time derivatives to compute
 		if (isGhost_i) continue;
 
-		// #pragma omp parallel for num_threads(NUMTHREADS)
+		#pragma omp parallel for num_threads(NUMTHREADS)
 
 		for (int i = 0; i < ps_i.n_points(); ++i){
 

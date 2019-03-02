@@ -143,11 +143,14 @@ std::cout << "... Computing Volume that should be used (2D) " << std::endl;
 
 			if (simDataIn["dimensions"] == 3){
 
-				for (int i = offset; i <= (int)((x1 - x0)/dx) - offset; i ++ ){
-				for (int j = offset; j <= (int)((y1 - y0)/dx) - offset; j ++ ){
-				for (int k = offset; k <= (int)((z1 - z0)/dx) - offset; k ++ ){
+				for (int i = 0; i <= (int)((x1 - x0)/dx) - offset; i ++ ){
+				for (int j = 0; j <= (int)((y1 - y0)/dx) - offset; j ++ ){
+				for (int k = 0; k <= (int)((z1 - z0)/dx) - offset; k ++ ){
 
-					Real3 posToAdd{x0 + dx * i, y0 + dx * j, z0 + dx * k};
+					Real3 posToAdd{x0 + dx * i + 0.5 * dx * offset, 
+												 y0 + dx * j + 0.5 * dx * offset,
+												 z0 + dx * k + 0.5 * dx * offset};
+												 
 					Real3 zeroVector{0,0,0};
 					Real3x3 zeromat{zeroVector,zeroVector,zeroVector};
 
@@ -330,10 +333,10 @@ void ParticleAttributes::fluidInit(){
 		}
 
 		jstart = offset;
-		jend = (int)((y1 - y0)/dx) - offset;
+		jend = (int)((y1 - y0)/dx);
 
 		kstart = offset;
-		kend = (int)((z1 - z0)/dx) - offset;
+		kend = (int)((z1 - z0)/dx);
 		if (simDataIn["dimensions"] == 2){
 			kstart = 0; kend = 0;
 		} else if (simDataIn["dimensions"] == 1){
@@ -348,9 +351,9 @@ void ParticleAttributes::fluidInit(){
 		int n = 0;
 		numParticles = 0;
 		std::cout << "... Generating Particles" << std::endl;
-		for (int i = offset; i <= (int)((x1 - x0)/dx) - offset; i ++ ){
-		for (int j = jstart; j <= jend; j ++ ){
-		for (int k = kstart; k <= kend; k ++ ){
+		for (int i = 0; i <= (int)((x1 - x0)/dx); i ++ ){
+		for (int j = 0; j <= jend; j ++ ){
+		for (int k = 0; k <= kend; k ++ ){
 			// std::cout << i << ", " << j << ", " << k << std::endl;
 
 			Real3 zeroVector{0,0,0};
@@ -358,9 +361,19 @@ void ParticleAttributes::fluidInit(){
 			Real3x3x3 zeroijk{zeromat,zeromat,zeromat};
 			Real3 _perturb{0,0,0};
 
-			Real3 posToAdd{x0 + dx * (Real)i,
-                 	       y0 + dx * (Real)j,
-                     	   z0 + dx * (Real)k};
+			Real3 posToAdd{x0 + dx * i + 0.5 * dx * offset, 
+											y0 + dx * j + 0.5 * dx * offset,
+											z0 + dx * k + 0.5 * dx * offset};
+			if(simDataIn["dimensions"] == 2){
+				posToAdd[2] = 0;
+				if(simDataIn["dimensions"] == 1){
+					posToAdd[1] = 0;
+				} 
+			}
+			
+			// Real3 posToAdd{x0 + dx * (Real)i,
+      //            	       y0 + dx * (Real)j,
+      //                	   z0 + dx * (Real)k};
 
 		  posToAdd = add(posToAdd,_perturb);
 
